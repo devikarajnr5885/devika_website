@@ -3,7 +3,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
 import { supabase, submitContactForm, testConnection } from './supabase.js';
-import './logo-cloud-init.jsx';
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
