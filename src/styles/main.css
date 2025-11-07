@@ -927,9 +927,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo-track {
     display: flex;
-    gap: 60px;
+    gap: 80px;
     align-items: center;
-    animation: slideLogos 30s linear infinite;
+    animation: slideLogos 25s linear infinite;
     flex-shrink: 0;
 }
 
@@ -942,12 +942,12 @@ h1, h2, h3, h4, h5, h6 {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-100% - 60px));
+        transform: translateX(calc(-100% - 80px));
     }
 }
 
 .logo-img {
-    height: 40px;
+    height: 50px;
     width: auto;
     object-fit: contain;
     filter: brightness(0) invert(1);
@@ -959,6 +959,12 @@ h1, h2, h3, h4, h5, h6 {
 .logo-img:hover {
     opacity: 1;
     transform: scale(1.1);
+}
+
+.logo-vapi {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
 }
 
 /* Enhanced Testimonials Section */
