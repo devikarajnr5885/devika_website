@@ -915,9 +915,50 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-text-fill-color: transparent;
 }
 
-.logo-cloud-container {
+.logo-slider {
     width: 100%;
     overflow: hidden;
+    position: relative;
+    display: flex;
+    gap: 0;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.logo-track {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    animation: slideLogos 30s linear infinite;
+    flex-shrink: 0;
+}
+
+.logo-slider:hover .logo-track {
+    animation-play-state: paused;
+}
+
+@keyframes slideLogos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% - 60px));
+    }
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.logo-img:hover {
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 /* Enhanced Testimonials Section */
