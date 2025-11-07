@@ -350,10 +350,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: 3.2rem;
     font-weight: 700;
     margin-bottom: 30px;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
 .title-line {
