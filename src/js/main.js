@@ -147,17 +147,31 @@ class AutomationWebsite {
 
     setupHero3D() {
         const container = document.getElementById('hero-3d-container');
-        if (!container) return;
+        if (!container) {
+            console.warn('Hero 3D container not found');
+            return;
+        }
 
         try {
+            console.log('Setting up 3D hero animation');
+
             // Scene setup
             this.heroScene = new THREE.Scene();
             this.heroCamera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
             this.heroRenderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-            
+
             this.heroRenderer.setSize(container.offsetWidth, container.offsetHeight);
+            this.heroRenderer.setPixelRatio(window.devicePixelRatio);
             this.heroRenderer.setClearColor(0x000000, 0);
-            container.appendChild(this.heroRenderer.domElement);
+
+            // Force canvas visibility
+            const canvas = this.heroRenderer.domElement;
+            canvas.style.display = 'block';
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+
+            container.appendChild(canvas);
+            console.log('3D canvas added to container');
 
             // Create 3D automation elements with enhanced colors
             this.createAutomationElements();
