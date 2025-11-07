@@ -179,15 +179,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-upwork {
-    background: linear-gradient(135deg, #14a800 0%, #108a00 100%);
+    background: var(--gradient-primary);
     color: var(--white);
-    box-shadow: 0 10px 30px rgba(20, 168, 0, 0.2);
-    border: 1px solid rgba(20, 168, 0, 0.25);
+    box-shadow: var(--shadow-primary);
+    border: 1px solid rgba(20, 184, 166, 0.25);
 }
 
 .btn-upwork:hover {
     transform: translateY(-2px);
-    box-shadow: 0 15px 40px rgba(20, 168, 0, 0.3);
+    box-shadow: var(--shadow-accent);
     filter: brightness(1.05);
 }
 
@@ -1760,7 +1760,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-image img {
     width: 100%;
-    max-width: 400px;
+    max-width: 250px;
     border-radius: 20px;
     box-shadow: var(--shadow-primary);
     border: 2px solid rgba(20, 184, 166, 0.2);
@@ -1770,8 +1770,8 @@ h1, h2, h3, h4, h5, h6 {
 .about-image::before {
     content: '';
     position: absolute;
-    width: 420px;
-    height: 420px;
+    width: 270px;
+    height: 270px;
     background: var(--gradient-glow);
     border-radius: 25px;
     animation: pulse 4s ease-in-out infinite;
