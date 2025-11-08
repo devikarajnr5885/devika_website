@@ -916,6 +916,32 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--shadow-soft);
 }
 
+.portfolio-note {
+    margin-top: 80px;
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+}
+
+.portfolio-divider {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(20, 184, 166, 0.4) 50%, transparent 100%);
+    max-width: 300px;
+}
+
+.portfolio-note-text {
+    color: rgba(148, 163, 184, 0.8);
+    font-size: 0.95rem;
+    font-style: italic;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+    text-align: center;
+}
+
 /* Enhanced Testimonials Section */
 .testimonials {
     padding: 120px 0;
@@ -2179,10 +2205,26 @@ h1, h2, h3, h4, h5, h6 {
     .portfolio-metrics {
         gap: 8px;
     }
-    
+
     .metric {
         padding: 6px 12px;
         font-size: 0.8rem;
+    }
+
+    .portfolio-note {
+        margin-top: 50px;
+        padding: 40px 0;
+        gap: 15px;
+    }
+
+    .portfolio-divider {
+        max-width: 80px;
+    }
+
+    .portfolio-note-text {
+        font-size: 0.85rem;
+        white-space: normal;
+        max-width: 200px;
     }
     
     /* Service Features Mobile */
